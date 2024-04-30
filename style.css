@@ -4,9 +4,40 @@
     --cor-de-fundo:#00162E;
     --fundo-senha:#00244D;
     --fundo-texto: hsl(212, 100%, 13%);
-    --borda:#0075FF;   
+    --borda:#0075FF;  
+    --roboto-mono:var(--borda)'roboto mono' ,monospace;
+    --roboto:'Roboto' , sans-serif;
 }
 body{
     background-color: var(--cor-de-fundo);
     color: var(--branco);
 }
+.conteudo-tutulo{
+    text-align: center;
+}
+*{
+    font-weight: 400;
+}
+.conteudo-senha{
+    margin-top: 80px;
+    backgroud:var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
+    }
+    #campo-senha{
+        background-color: var(--fundo-senha);
+        border: none;
+        color: var(--branco);
+        font-family: var(--roboto-mono);
+        font-size: 40px;
+    }
+    .titulo-principal{
+        font-family: var(--roboto-mono);
+        font-size: 32px;
+    }
+    .titulo-segundario{
+        font-size: 24px;
+    }
+    #campo-senha:focus{
+        outline: none;
+    }
