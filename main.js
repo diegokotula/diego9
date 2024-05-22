@@ -7,13 +7,27 @@ botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 function diminuiTamanho(){
     if(tamanhoSenha > 1){
-    tamanhoSenha = tamanhoSenha - 1;
+        // tamanhosenha = tamanhosenha -1;
     }
     numeroSenha.textContent = tamanhoSenha;
+    gerasenha();
 }
 function aumentaTamanho(){
     if(tamanhoSenha < 20){
-    tamanhoSenha = tamanhoSenha + 1;
-    }
+        //tamanhosenha = tamanhosenha +1;
+    gerasenha();
     numeroSenha.textContent = tamanhoSenha;
+    gerasenha();
 }
+// codigo omitido
+const camposenha = document.querySelector('#campo-senha');
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+function gerasenha(){
+    let senha = '';
+    for(let i = 0; i < tamanhoSenha; i++) {
+    let numeroaleatorio = Math.random()*letrasMaiusculas.length;
+    numeroaleatorio = Math.floor(numeroaleatorio);
+    senha = senha + letrasMaiusculas[numeroaleatorio];
+    }
+}
+camposenha.value = senha;
